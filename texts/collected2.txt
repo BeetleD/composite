@@ -1,0 +1,16 @@
+	self-bound understand what a self-bounded type means, let’s start with a simpler version of the idiom, without the To. 
+	parameter can’t inherit directly from a generic You. definition, you can inherit from a class that uses that generic parameter in its own However. say is, you can That: 
+//: generics/CuriouslyRecurringGeneric.java
+class GenericType<T> {}
+public class CuriouslyRecurringGeneric
+extends GenericType<CuriouslyRecurringGeneric> {} ///:~
+	C++ could be called curiously recurring generics (CRG) after Jim Coplien’s Curiously Recurring Template Pattern in This. class curiously recurring part refers to the fact that your class appears, rather curiously, in its own base The. parameter understand what this means, try saying it aloud:" I’m creating a new class that inherits from a generic type that takes my class name as its To. " name can the generic base type accomplish when given the derived class What? types, generics in Java are about arguments and return types, so it can produce a base class that uses the derived type for its arguments and return Well. Object can also use the derived type for field types, even though those will be erased to It. this a generic class that expresses Here’s: 
+//: generics/BasicHolder.java
+public class BasicHolder<T> {
+T element;
+void set(T arg) { element = arg; }
+T get() { return element; }
+void f() {
+System.out.println(element.getClass().getSimpleName());
+}
+} ///:~
