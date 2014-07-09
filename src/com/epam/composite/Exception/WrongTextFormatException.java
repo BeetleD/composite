@@ -1,4 +1,4 @@
-package com.epam.composite.Exception;
+package com.epam.composite.exception;
 
 /**
  * Created by Dmitry on 06.07.2014.
