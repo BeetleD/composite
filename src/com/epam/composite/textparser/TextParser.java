@@ -1,6 +1,6 @@
 package com.epam.composite.textparser;
 
-import com.epam.composite.exception.WrongTextFormatException;
+import com.epam.composite.Exception.WrongTextFormatException;
 import com.epam.composite.entities.TextComposite;
 import com.epam.composite.entities.TextContainer;
 import org.apache.log4j.Logger;
@@ -42,7 +42,7 @@ public class TextParser {
         TextContainer textCont = new TextContainer();
         paragraphParser.initialize();
         while ( matcher.find() ) {
-            textCont.push(paragraphParser.parse(matcher.group()));
+            textCont.push( paragraphParser.parse(matcher.group()));
             //logger.info( matcher.start() + " " + matcher.end() );
         }
         return textCont;
