@@ -1,6 +1,6 @@
 package com.epam.composite;
 
-import com.epam.composite.Exception.WrongTextFormatException;
+import com.epam.composite.exception.WrongTextFormatException;
 import com.epam.composite.entities.TextContainer;
 import com.epam.composite.textcollector.TextCollector;
 import com.epam.composite.textoperation.TextOperation;
@@ -30,7 +30,7 @@ public class Main {
             PrintWriter pw = new PrintWriter("texts\\collected1.txt");
             pw.write( textCollector.collect( textContainer ));
             pw.close();
-            TextOperation.swapFirstLast( textContainer );
+            TextOperation.swapFirstLast(textContainer);
             pw = new PrintWriter("texts\\collected2.txt");
             pw.write(textCollector.collect( textContainer ) );
             pw.close();
