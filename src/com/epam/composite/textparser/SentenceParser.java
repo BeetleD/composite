@@ -1,6 +1,6 @@
 package com.epam.composite.textparser;
 
-import com.epam.composite.exception.WrongTextFormatException;
+import com.epam.composite.Exception.WrongTextFormatException;
 import com.epam.composite.entities.*;
 
 import java.util.Properties;
